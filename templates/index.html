@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=PT+Mono&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/static/styles.css" />
+
+    <title>BOGGLE</title>
+  </head>
+  <body>
+    <header>
+      <h1>BOGGLE</h1>
+      <form method="POST">
+        <input
+          type="text"
+          id="word"
+          name="word"
+          placeholder="enter a word"
+          autofocus
+        />
+        <button id="submit">Submit</button>
+      </form>
+      <div class="stats">
+        <p>Score:<span id="score">0</span></p>
+        <p>Highscore:<span id="highscore">{{ highscore }}</span></p>
+        <p>Times Played:<span id="plays">{{ num_plays }}</span></p>
+        <p>Time Left:<span id="timer">60</span></p>
+      </div>
+      <p class="message"></p>
+    </header>
+
+    <div class="container">
+      <div class="game-board">
+        {% for row in board %} {% for char in row %}
+        <div>{{ char }}</div>
+
+        {% endfor %} {% endfor %}
+      </div>
+
+      <aside>
+        <h2>Words Found</h2>
+        <ul id="words-found"></ul>
+      </aside>
+    </div>
+
+    <script src="/static/app.js"></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+  </body>
+</html>

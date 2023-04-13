@@ -1,0 +1,97 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'PT Mono', monospace;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+header {
+  width: 500px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0;
+}
+
+h1 {
+  width: 100%;
+  background-color: #ddd;
+  text-align: center;
+  margin: 0;
+  margin-bottom: 0.25em;
+  font-size: 3rem;
+  letter-spacing: 0.5em;
+}
+
+input {
+  font-family: 'PT Mono', monospace;
+  margin: 0 auto;
+  padding: 0.25rem 0.5rem;
+  width: 200px;
+}
+
+button {
+  font-family: 'PT Mono', monospace;
+}
+
+h2 {
+  margin: 0;
+  text-align: center;
+}
+
+span {
+  font-size: 1.5rem;
+}
+
+ul {
+  list-style-type: none;
+}
+
+.stats {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  /* align-content: space-between; */
+}
+
+.container {
+  margin: 0 auto;
+  width: 550px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.game-board {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-template-rows: repeat(5, 1fr);
+  gap: 5px;
+  width: 500px;
+  height: 500px;
+}
+
+.game-board div {
+  background-color: #ddd;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 3rem;
+}
+
+aside {
+  margin: 0 0 0 0.5em;
+  padding: 0.25em 0.5em;
+  height: 500px;
+  background-color: #ddd;
+}
+
+.message {
+  margin: 0;
+}
